@@ -1,0 +1,24 @@
+site_name: Study Wiki
+site_description: “A living knowledge base for every learner.”
+repo_url: https://github.com/julianmfx/study
+
+nav:
+  - Introduction: 00-Introduction.md
+  - Wiki Structure: 01-Wiki-Structure.md
+  - Topics Being Addressed: 02-Topics-Being-Addressed.md
+  - Topics To Be Addressed: 03-Topics-To-Be-Addressed.md
+  - What Can Be Better: 04-What-Can-Be-Better.md
+
+theme:
+  name: material  # https://squidfunk.github.io/mkdocs-material/
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - content.code.copy
+
+markdown_extensions:
+  - admonition
+  - toc
+  - tables
+  - pymdownx.highlight
+  - pymdownx.superfences
