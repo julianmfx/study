@@ -4,7 +4,7 @@ site_description: “A living knowledge base for every learner.”
 repo_url: https://github.com/julianmfx/study
 
 nav:
-  - Introduction: 00-Introduction.md
+  - Introduction: index.md
   - Wiki Structure: 01-Wiki-Structure.md
   - Topics Being Addressed: 02-Topics-Being-Addressed.md
   - Topics To Be Addressed: 03-Topics-To-Be-Addressed.md
