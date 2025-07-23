@@ -1,7 +1,8 @@
 # docs/.pages   ← example
 title: Core Topics
 collapse: true
-order:
+
+nav:
   - index.md
   - 01-Wiki-Structure.md
   - 02-Topics-Being-Addressed.md
