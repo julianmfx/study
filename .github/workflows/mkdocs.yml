@@ -1,0 +1,26 @@
+name: Deploy MkDocs to GitHub Pages
+
+on:
+  push:
+    branches: [main]          # run on every push to main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: ✨ Check out source
+        uses: actions/checkout@v4
+
+      - name: 🐍 Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: 📦 Install requirements
+        run: pip install -r requirements.txt          # ← pulls mkdocs & the plugin
+
+      - name: 🚀 Deploy with mkdocs
+        run: mkdocs gh-deploy --force --clean         # pushes to gh-pages
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}       # auto-provided token
