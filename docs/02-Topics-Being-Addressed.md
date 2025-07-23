@@ -3,7 +3,7 @@
 | # | Topic | Status | Last updated |
 |---|-------|--------|--------------|
 | 1 | *Example Topic* | Stable | 2025‑07‑03 |
-| 2 | [Inheritance](05-Inheritance.md) | Stable | 2025-07-23|
+| 2 | [Inheritance](05-Inheritance.md) | Stable | 2025-07-23 |
 _Add rows as you publish new articles. Use the template below:_
 
 ## <Topic Name>
