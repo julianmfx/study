@@ -20,17 +20,8 @@ jobs:
 
       - name: 📦 Install requirements
         run: |
-          pip install -r requirements.txt
-          echo "----- Installed MkDocs packages -----"
+          pip install --no-cache-dir -r requirements.txt
           pip list | grep mkdocs
-
-          # Fail immediately if the plugin didn't get installed
-          python - <<'PY'
-          import importlib, sys
-          if importlib.util.find_spec("mkdocs_awesome_pages_plugin") is None:
-              print("mkdocs-awesome-pages-plugin is NOT installed")
-              sys.exit(1)
-          PY
 
       - name: 🚀 Deploy with mkdocs
         env:
