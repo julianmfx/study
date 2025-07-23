@@ -1,0 +1,38 @@
+# .github/workflows/deploy-docs.yml
+name: Deploy MkDocs to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: ✨ Check out source
+        uses: actions/checkout@v4
+
+      - name: 🐍 Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: 📦 Install requirements
+        run: |
+          pip install -r requirements.txt
+          echo "----- Installed MkDocs packages -----"
+          pip list | grep mkdocs
+
+          # Fail immediately if the plugin didn't get installed
+          python - <<'PY'
+          import importlib, sys
+          if importlib.util.find_spec("mkdocs_awesome_pages_plugin") is None:
+              print("mkdocs-awesome-pages-plugin is NOT installed")
+              sys.exit(1)
+          PY
+
+      - name: 🚀 Deploy with mkdocs
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: mkdocs gh-deploy --force --clean
