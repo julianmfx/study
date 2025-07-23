@@ -9,7 +9,7 @@ nav:
   - Topics Being Addressed: 02-Topics-Being-Addressed.md
   - Topics To Be Addressed: 03-Topics-To-Be-Addressed.md
   - What Can Be Better: 04-What-Can-Be-Better.md
-
+  - Inheritance: 05-Inheritance.md
 theme:
   name: material  # https://squidfunk.github.io/mkdocs-material/
   features:
