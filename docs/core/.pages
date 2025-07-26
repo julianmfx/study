@@ -2,10 +2,9 @@ title: Core Topics
 collapse: true
 
 nav:
-  - index.md
   - 01-Wiki-Structure.md
   - 02-Topics-Being-Addressed.md
   - 03-Topics-To-Be-Addressed.md
   - 04-What-Can-Be-Better.md
   - 05-Inheritance.md
-  - 06-confusion-matrix.md
+  - 06-Confusion-Matrix.md
