@@ -1,10 +1,8 @@
-title: Core Topics
+title: Deep DIves
 collapse: true
 
 nav:
-  - 01-Wiki-Structure.md
-  - 02-Topics-Being-Addressed.md
-  - 03-Topics-To-Be-Addressed.md
-  - 04-What-Can-Be-Better.md
   - 05-Inheritance.md
+	hidden: true
   - 06-Confusion-Matrix.md
+	hidden: true
